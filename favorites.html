@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное - Вязаные чудеса</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>&nbsp;&nbsp;Избранное</h1>
+            <div class="header-actions">
+                <a href="favorites.html" class="favorites-link">
+                    <i class="fas fa-heart"></i>
+                    <span class="favorites-count">0</span>
+                </a>
+                <div class="contact-link">
+                    <a href="#contact-modal" class="btn-contact">
+                        <i class="fas fa-comment-dots"></i> Связаться
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <a href="index.html#toys" class="nav-link"><i class="fas fa-cat"></i><i class="fas fa-socks"></i> Вернуться к товарам</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        
+        <div id="favorites-grid" class="product-grid">
+            <!-- Товары будут загружены через JS -->
+            <div class="empty-favorites">
+                <i class="fas fa-heart"></i>
+                <p>Пока нет избранных товаров</p>
+                
+                <a href="index.html" class="btn">Перейти к товарам</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Вязаные чудеса</p>
+    </footer>
+
+    <script src="favorites.js"></script>
+    <script src="main.js"></script>
+<!-- Модальное окно для связи -->
+
+<div id="contact-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <p>Выберите способ связи:</p>
+    <div class="messengers">
+      <a href="https://wa.me/89009822523" target="_blank" class="messenger-btn whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://t.me/kurumi_2811" target="_blank" class="messenger-btn telegram">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      <a href="https://vk.com/bondarenko4ka" target="_blank" class="messenger-btn vk">
+        <i class="fab fa-vk"></i> ВКонтакте
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

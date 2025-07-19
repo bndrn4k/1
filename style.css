@@ -1,0 +1,563 @@
+
+
+/* Шрифты для заголовков */
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+  color: #6B4423;
+  font-weight: normal;
+}
+
+/* Кнопки подробнее */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+
+}
+.btn:hover {
+    background: var(--primary);
+}
+
+
+:root {
+    --primary: #6B4423; /* Шоколадный */
+    --secondary: #D2B48C; /* Tan */
+    --background: #FAF3E6;
+    --text: #3E2723;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.header-actions a {
+    position: relative;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header-actions .favorites-count,
+.header-actions .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    padding: 0 20px;
+}
+
+nav a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+nav a.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* Сетка товаров */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+    padding: 20px;
+    position: relative;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Кнопка избранного */
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--white);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ccc;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    z-index: 2;
+}
+
+.favorite-btn.active {
+    color: var(--primary);
+}
+
+.favorite-btn:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Информация о товаре */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+}
+
+.product-title {
+    font-size: 16px;
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+
+
+/* Стили для Swiper */
+.swiper {
+    height: 250px;
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary);
+    width: 30px;
+    height: 30px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    transition: all 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(255,255,255,0.9);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: var(--white);
+    border-top: 1px solid var(--light-gray);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .header-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: -100%;
+    background: #6B4423;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transition: right 0.5s ease-in-out;
+}
+
+.notification.show {
+    right: 20px;
+}
+
+.notification i {
+    font-size: 20px;
+}
+
+.notification.error {
+    background: #f44336;
+}
+
+.notification.warning {
+    background: #ff9800;
+}
+
+
+
+
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+
+.messengers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.messenger-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.messenger-btn i {
+    font-size: 20px;
+}
+
+.messenger-btn.whatsapp {
+    background: #25D366;
+}
+
+.messenger-btn.telegram {
+    background: #0088cc;
+}
+
+.messenger-btn.vk {
+    background: #4C75A3;
+}
+
+
+
+
+
+
+
+
+
+
+
+.view-details {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.view-details:hover {
+    background: #D2B48C;
+}
+
+.empty-favorites {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.empty-favorites i {
+    font-size: 50px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.empty-favorites p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.empty-favorites .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.empty-favorites {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Это создаст равные отступы между всеми элементами */
+}
+
+.empty-favorites i {
+    font-size: 50px;
+    color: var(--primary);
+    margin-bottom: 10px; /* Уменьшаем отступ снизу */
+}
+
+.empty-favorites p {
+    margin: 0; /* Убираем стандартные отступы */
+    font-size: 18px;
+    color: #555; /* Добавляем мягкий цвет текста */
+}
+
+.empty-favorites .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-top: 10px; /* Дополнительный отступ сверху */
+}
+
+.empty-favorites .btn:hover {
+    background: #e6748e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Костюм мятный - Вязаные чудеса</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+   <header>
+        <div class="header-top">
+            <h1>&nbsp;&nbsp;Костюм мятный</h1>
+            <div class="header-actions">
+                <a href="favorites.html" class="favorites-link">
+                    <i class="fas fa-heart"></i>
+                    <span class="favorites-count">0</span>
+                </a>
+                <div class="contact-link">
+                    <a href="#contact-modal" class="btn-contact">
+                        <i class="fas fa-comment-dots"></i> Связаться
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <a href="index.html#toys" class="nav-link"><i class="fas fa-arrow-left"></i> Вернуться к товарам</a>
+        </nav>
+    </header>
+
+    <main class="container product-page">
+        <div class="product-gallery">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/kostum.jpg">
+                    </div>
+                    <!--
+                    <div class="swiper-slide">
+                        <img src="img/zayavplate2.jpg" >
+                    </div>
+                    -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        
+        <div class="product-details">
+            <div class="favorite-btn-container">
+                <button class="add-to-favorites" data-product-id="1">
+                    <i class="far fa-heart"></i> Добавить в избранное
+                </button>
+            </div>
+
+            <div class="price">1 800 ₽</div>
+            
+            <div class="description">
+                <h3>Описание:</h3>
+                <p>Уютный комплект для новорожденных из мягчайшей пряжи. Идеально подходит для фотосессий и первых прогулок. Не раздражает нежную кожу малыша.</p>
+                
+                <h3>Характеристики:</h3>
+                <ul>
+                    <li><strong>Материалы:</strong> 100% микрополиэстер</li>
+                    <li><strong>Цвета:</strong> (на выбор)</li>
+                    <li><strong>Размер:</strong> 62-74</li>
+                    <li><strong>Уход:</strong> бережная стирка при 30°C</li>
+                    <li><strong>Особенности:</strong> плоские швы, гипоаллергенно</li>
+                    
+                </ul>
+                
+                <h3>Дополнительно:</h3>
+                <p>Возможен индивидуальный заказ с выбором цветовой гаммы. Срок изготовления - 7-14 рабочих дней.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2025 Вязаные чудеса</p>
+    </footer>
+
+    <!-- Модальное окно для связи -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3>Выберите способ связи:</h3>
+            <div class="messengers">
+                <a href="https://wa.me/89009822523" target="_blank" class="messenger-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/kurumi_2811" target="_blank" class="messenger-btn telegram">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+                <a href="https://vk.com/bondarenko4ka" target="_blank" class="messenger-btn vk">
+                    <i class="fab fa-vk"></i> ВКонтакте
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script-product.js"></script>
+</body>
+</html>

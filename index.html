@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вязаные чудеса - Игрушки и костюмы</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>&nbsp;&nbsp;Вязаные чудеса</h1>
+            <div class="header-actions">
+                <a href="favorites.html" class="favorites-link">
+                    <i class="fas fa-heart"></i>
+                    <span class="favorites-count">0</span>
+                </a>
+
+                <div class="contact-link">
+                    <a href="#contact-modal" class="btn-contact">
+                        <i class="fas fa-comment-dots"></i> Связаться
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <a href="#toys" class="active"><i class="fas fa-cat"></i> Игрушки</a>
+            <a href="#costumes"><i class="fas fa-socks"></i> Одежда</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Секция игрушек -->
+        <section id="toys" class="product-section">
+            
+            <section class="hero">
+                <div class="hero-content">
+                <h2>Уютные друзья для ваших малышей</h2>
+                <p>Каждая игрушка связана вручную с заботой ♡</p>
+                </div>
+            </section>
+
+
+            <div class="product-grid">
+                <!-- Зайка в платьишке -->
+                <div class="product-card" data-id="1">
+                    <div class="product-image">
+                        <img src="img/zayavplate.jpg" alt="Зайка в платьишке">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Зайка в платьишке</h3>
+                        <div class="product-price">1 800 ₽</div>
+                        <a href="product-1.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+
+                <!-- Плюшевый зайчик -->
+                <div class="product-card" data-id="2">
+                    <div class="product-image">
+                        <img src="img/zaiki.jpg" alt="Плюшевый зайчик">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Плюшевый зайчик</h3>
+                        <div class="product-price">1 500 ₽</div>
+                        <a href="product-2.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+
+                <!-- Дракончик -->
+                <div class="product-card" data-id="3">
+                    <div class="product-image">
+                        <img src="img/drakonchik.jpg" alt="Дракончик">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Дракончик-брелок</h3>
+                        <div class="product-price">900 ₽</div>
+                        <a href="product-3.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+
+                <!-- Лама -->
+                <div class="product-card" data-id="4">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/lama1.jpg" alt="Лама 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/lama2.jpg" alt="Лама 2">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="product-info">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                        <h3 class="product-title">Лама в костюмчике</h3>
+                        <div class="product-price">2 300 ₽</div>
+                        <a href="product-4.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+
+                <!-- Дед Мороз -->
+                <div class="product-card" data-id="5">
+                    <div class="product-image">
+                        <img src="img/dedmoroz.jpg" alt="Дед Мороз">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Дед Мороз</h3>
+                        <div class="product-price">2 100 ₽</div>
+                        <a href="product-5.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+
+                <!-- Пчелка -->
+                <div class="product-card" data-id="6">
+                    <div class="product-image">
+                        <img src="img/pchela.jpg" alt="Пчелка">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Пчелка с цветочками</h3>
+                        <div class="product-price">1 700 ₽</div>
+                        <a href="product-6.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция костюмов -->
+        <section id="costumes" class="product-section" style="display:none;">
+            <h2>Детские костюмы</h2>
+            <div class="product-grid">
+                <!-- Песочный костюм -->
+                <div class="product-card" data-id="7">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/k1.jpg" alt="Песочный костюм 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/k2.jpg" alt="Песочный костюм 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/k3.jpg" alt="Песочный костюм 3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/k4.jpg" alt="Песочный костюм 4">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-info">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                        <h3 class="product-title">Костюм песочный (0-3 мес)</h3>
+                        <div class="product-price">3 500 ₽</div>
+                        <a href="product-7.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+
+                <!-- Мятный костюм -->
+                <div class="product-card" data-id="8">
+                    <div class="product-image">
+                        <img src="img/kostum.jpg" alt="Мятный костюм">
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Костюм мятный (0-6 мес)</h3>
+                        <div class="product-price">3 200 ₽</div>
+                        <a href="product-8.html" class="btn btn-pink">Подробнее </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Вязаные чудеса</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+
+
+    
+<!-- Модальное окно для связи -->
+
+<div id="contact-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <p>Выберите способ связи:</p>
+    <div class="messengers">
+      <a href="https://wa.me/89009822523" target="_blank" class="messenger-btn whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://t.me/kurumi_2811" target="_blank" class="messenger-btn telegram">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      <a href="https://vk.com/bondarenko4ka" target="_blank" class="messenger-btn vk">
+        <i class="fab fa-vk"></i> ВКонтакте
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
